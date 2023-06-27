@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration</title>
+</head>
+<body>
+<h1>Patients</h1>
+<ul>
+<% patientsData.forEach(patient => { %>
+<li>
+<strong>Name:</strong> <%= patient.name %><br />
+<strong>Email:</strong> <%= patient.email %><br />
+<strong>Address:</strong> <%= patient.address %><br />
+
+</li>
+<% }) %>
+</ul>
+</body>
+</html>

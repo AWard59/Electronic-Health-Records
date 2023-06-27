@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Appointment List</title>
+<style></style>
+</head>
+<body>
+<h1>Appointment List</h1>
+<p>No appointments available for this patient ID.</p>
+<table>
+<thead>
+<tr>
+<th>Appointment ID</th>
+<th>Appointment Date</th>
+<th>Appointment Time</th>
+<th>Purpose</th>
+<th>Doctor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>
+<a>Reschedule</a>
+<form
+              action="/patients/appointment/delete"
+              method="post"
+              style="display: inline"
+            >
+<input type="hidden" name="appointmentId" />
+<button
+                type="submit"
+                onclick="return confirm('Are you sure you want to cancel this appointment?')"
+              >
+Cancel
+</button>
+</form>
+<form
+              action="/appointments/reminders"
+              method="post"
+              style="display: inline"
+            >
+<input type="hidden" name="appointmentId" />
+<button
+                type="submit"
+                onclick="return confirm('Send appointment reminders?')"
+              >
+Send Reminder
+</button>
+</form>
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
